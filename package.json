@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start:test": "set NODE_ENV=test&&node -r dotenv/config ./config/env.js && node ./bin/www",
+    "start:preview": "set NODE_ENV=preview&&node -r dotenv/config ./config/env.js && node ./bin/www",
+    "start:production": "set NODE_ENV=production&&node -r dotenv/config ./config/env.js && node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.0.3",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",

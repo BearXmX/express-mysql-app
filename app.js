@@ -1,8 +1,11 @@
+process.env.PORT = 8000
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('./config/env')
 
 var indexRouter = require('./routes/index');
 var insertRouter = require('./routes/insert');
